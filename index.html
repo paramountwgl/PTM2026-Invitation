@@ -52,6 +52,57 @@ footer {
     justify-content: center;
     gap: 25px;
 }
+        /* Luxury Details Box */
+.details-grid {
+    margin: 50px auto;
+    max-width: 600px;
+    border-top: 1px solid rgba(197, 160, 89, 0.3);
+    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+    padding: 30px 0;
+    display: flex; /* Changed from grid to flex for better divider control */
+    align-items: center;
+    justify-content: center;
+    gap: 0; /* Gap is handled by the divider padding */
+}
+
+.detail-item {
+    flex: 1;
+    padding: 0 20px;
+}
+
+/* The Premium Vertical Divider */
+.vertical-divider {
+    width: 1px;
+    height: 40px; /* Short, elegant line */
+    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+    opacity: 0.6;
+}
+
+.detail-item i {
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.detail-item span {
+    display: block;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+/* Mobile Fix: Stack them and hide divider if screen is too small */
+@media (max-width: 600px) {
+    .details-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .vertical-divider {
+        display: none; /* Hide vertical line when items are stacked */
+    }
+}
 
 .social-icons a {
     color: #ffffff;
@@ -344,16 +395,19 @@ footer {
             <h1 class="event-title">ANNUAL RESULTS DAY & PTM<br> <span style="font-size: 0.7em;">2026</span></h1>
         </div>
 
-        <div class="details-grid animate-up" style="animation-delay: 0.6s;">
-            <div class="detail-item">
-                <i class="far fa-calendar-alt"></i>
-                <span>April 30, 2026</span>
-            </div>
-            <div class="detail-item">
-                <i class="far fa-clock"></i>
-                <span>09:30 AM Onwards</span>
-            </div>
-        </div>
+      <div class="details-grid animate-up" style="animation-delay: 0.6s;">
+    <div class="detail-item">
+        <i class="far fa-calendar-alt"></i>
+        <span>April 30, 2026</span>
+    </div>
+
+    <div class="vertical-divider"></div>
+
+    <div class="detail-item">
+        <i class="far fa-clock"></i>
+        <span>09:00 AM Onwards</span>
+    </div>
+</div>
 
         <div class="venue-section animate-up" style="animation-delay: 0.8s;">
     <p class="venue-title">
