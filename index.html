@@ -7,481 +7,156 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Great+Vibes&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="icon" type="image/png" href="School logo 2.png">
 
     <style>
         :root {
             --gold: #c5a059;
-            --dark-gold: #8e6d2f;
             --navy: #030a1a;
             --white: #f4f4f4;
         }
-        /* --- Premium Footer Styling --- */
-footer {
-    background-color: #030a1a; /* Deep Navy to match your theme */
-    padding: 50px 20px;
-    text-align: center;
-    border-top: 2px solid #c5a059; /* Gold top border */
-    margin-top: 50px;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.copyright {
-    color: #ffffff;
-    font-size: 0.85rem;
-    opacity: 0.7;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
-}
-
-.connect-text {
-    font-family: 'Cinzel', serif;
-    color: #c5a059;
-    font-size: 1.2rem;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-        /* Luxury Details Box */
-.details-grid {
-    margin: 50px auto;
-    max-width: 600px;
-    border-top: 1px solid rgba(197, 160, 89, 0.3);
-    border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-    padding: 30px 0;
-    display: flex; /* Changed from grid to flex for better divider control */
-    align-items: center;
-    justify-content: center;
-    gap: 0; /* Gap is handled by the divider padding */
-}
-
-.detail-item {
-    flex: 1;
-    padding: 0 20px;
-}
-
-/* The Premium Vertical Divider */
-.vertical-divider {
-    width: 1px;
-    height: 40px; /* Short, elegant line */
-    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-    opacity: 0.6;
-}
-
-.detail-item i {
-    color: var(--gold);
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-    display: block;
-}
-
-.detail-item span {
-    display: block;
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-/* Mobile Fix: Stack them and hide divider if screen is too small */
-@media (max-width: 600px) {
-    .details-grid {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .vertical-divider {
-        display: none; /* Hide vertical line when items are stacked */
-    }
-}
-
-.social-icons a {
-    color: #ffffff;
-    font-size: 24px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid rgba(197, 160, 89, 0.3);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    display: inline-block;
-    text-decoration: none;
-}
-
-/* Hover Effects */
-.social-icons a:hover {
-    color: #030a1a;
-    background-color: #c5a059;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
-    border-color: #c5a059;
-}
-
-/* Responsive Tweak for Mobile */
-@media (max-width: 480px) {
-    .social-icons {
-        gap: 15px;
-    }
-    .social-icons a {
-        font-size: 20px;
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-    }
-}
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--navy);
-            color: var(--white);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden; /* Stops the main body from scrolling */
             font-family: 'Montserrat', sans-serif;
-            overflow-x: hidden;
-            /* Elegant background texture */
-            background-image: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, rgba(3, 10, 26, 1) 100%),
-                              url('https://www.transparenttextures.com/patterns/dark-leather.png');
+            background-image: radial-gradient(circle at center, #1e293b 0%, #030a1a 100%);
         }
 
-     .invitation-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 100px 20px; /* Increased top padding for a clean look */
-    text-align: center;
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* 3. ADD THE FOOTER CSS AT THE BOTTOM */
-footer {
-    background-color: rgba(3, 10, 26, 0.8); /* Semi-transparent navy */
-    padding: 60px 20px;
-    text-align: center;
-    border-top: 1px solid rgba(197, 160, 89, 0.3); /* Subtle gold line instead of heavy border */
-    margin-top: 50px;
-}
-
-.connect-text {
-    font-family: 'Cinzel', serif;
-    color: var(--gold);
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    letter-spacing: 3px;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 22px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid rgba(197, 160, 89, 0.4);
-    border-radius: 50%;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.social-icons a:hover {
-    background: var(--gold);
-    color: var(--navy);
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
-}
-
-.copyright {
-    font-size: 0.75rem;
-    opacity: 0.5;
-    margin-top: 30px;
-    letter-spacing: 1px;
-}
-        .invitation-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 80px 20px;
-            text-align: center;
-            min-height: 100vh;
+        /* The Premium Outer Border */
+        .invitation-frame {
+            width: 92%;
+            max-width: 850px;
+            height: 85vh;
+            border: 2px solid var(--gold);
+            position: relative;
+            background: rgba(3, 10, 26, 0.6);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
             display: flex;
             flex-direction: column;
-            justify-content: center;
         }
 
-        .school-logo {
-            height: 100px;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.4));
-            animation: fadeIn 2s ease-in;
+        /* Scrollable Content Area - Information stays INSIDE */
+        .scroll-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 40px 20px;
+            text-align: center;
+            /* Thin scrollbar for premium look */
+            scrollbar-width: thin;
+            scrollbar-color: var(--gold) transparent;
         }
 
-        .school-name {
-            font-family: 'Cinzel', serif;
-            font-size: 1.2rem;
-            letter-spacing: 5px;
-            color: var(--gold);
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+        /* Custom Scrollbar for Chrome/Safari */
+        .scroll-content::-webkit-scrollbar { width: 4px; }
+        .scroll-content::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
 
-        .request-text {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 200;
-            font-size: 1rem;
-            letter-spacing: 3px;
-            margin: 40px 0;
-            opacity: 0.8;
-        }
+        .school-logo { height: 80px; margin-bottom: 20px; }
+        .school-name { font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 4px; color: var(--gold); margin-bottom: 30px; }
 
         .event-title {
             font-family: 'Cinzel', serif;
-            font-size: clamp(1.8rem, 6vw, 3.5rem);
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            background: linear-gradient(to right, #fff, var(--gold), #fff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: clamp(1.5rem, 5vw, 2.8rem);
+            color: #fff;
+            line-height: 1.2;
+            margin: 20px 0;
         }
 
-        .cursive-divider {
-            font-family: 'Great Vibes', cursive;
-            font-size: 3rem;
-            color: var(--gold);
-            margin: 15px 0;
-        }
+        .cursive-divider { font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--gold); }
 
-        /* Luxury Details Box */
-        .details-grid {
-            margin: 50px auto;
-            max-width: 600px;
-            border-top: 1px solid var(--gold);
-            border-bottom: 1px solid var(--gold);
-            padding: 30px 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .detail-item {
-            padding: 10px;
-        }
-
-        .detail-item i {
-            color: var(--gold);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .detail-item span {
-            display: block;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .venue-section {
-            margin-top: 30px;
-        }
-
-        .venue-title {
-            font-weight: 600;
-            color: var(--gold);
-            letter-spacing: 2px;
-            margin-bottom: 5px;
-        }
-
-        .address {
-            font-style: normal;
-            font-size: 0.9rem;
-            opacity: 0.8;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        .venue-title {
-    font-weight: 600;
-    color: var(--gold);
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    display: flex; /* Helps align icon and text */
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Space between icon and word */
-}
-
-.venue-title i {
-    font-size: 1.2rem;
-}
-
-        /* Elegant Countdown */
-        .countdown-container {
+        /* Date/Time Row Fix */
+        .details-row {
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 30px;
-            margin-top: 60px;
+            max-width: 500px;
+            margin: 40px auto;
+            border-top: 1px solid rgba(197, 160, 89, 0.3);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 20px 0;
         }
 
-        .count-box span {
-            display: block;
-            font-family: 'Cinzel', serif;
-            font-size: 2rem;
-            color: var(--gold);
+        .detail-box { flex: 1; text-align: center; }
+        .detail-box i { color: var(--gold); display: block; margin-bottom: 8px; font-size: 1.2rem; }
+        .detail-box span { font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
+
+        .v-line {
+            width: 1px;
+            height: 50px;
+            background: linear-gradient(to bottom, transparent, var(--gold), transparent);
+            margin: 0 10px;
         }
 
-        .count-box label {
-            font-size: 0.7rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: 0.6;
-        }
+        .venue-section { margin: 40px 0; }
+        .venue-title { color: var(--gold); font-weight: 600; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px; }
+        .address { font-size: 0.85rem; opacity: 0.8; line-height: 1.6; color: #fff; }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        /* Social Footer inside Scroll */
+        .footer-inner { margin-top: 50px; padding-bottom: 20px; }
+        .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
+        .social-links a { color: var(--gold); font-size: 1.2rem; transition: 0.3s; }
+        .social-links a:hover { transform: translateY(-3px); color: #fff; }
 
-        .animate-up {
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-
-        /* Responsive Mobile Tweak */
         @media (max-width: 600px) {
-            .details-grid { grid-template-columns: 1fr; }
-            .event-title { font-size: 2.2rem; }
-            .countdown-container { gap: 15px; }
-            .page-frame { top: 10px; left: 10px; right: 10px; bottom: 10px; }
-        }
-
-        .footer-note {
-            margin-top: 80px;
-            font-size: 0.75rem;
-            letter-spacing: 3px;
-            opacity: 0.5;
-            text-transform: uppercase;
+            .invitation-frame { height: 90vh; width: 95%; }
+            .details-row { flex-direction: row; font-size: 0.7rem; }
+            .v-line { height: 40px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="page-frame"></div>
-
-    <div class="invitation-container">
-        <div class="animate-up">
-            <img src="School logo 2.png" alt="School Logo" class="school-logo">
+    <div class="invitation-frame">
+        <div class="scroll-content">
+            
+            <img src="School logo 2.png" alt="Logo" class="school-logo">
             <h2 class="school-name">Paramount English Medium School</h2>
-            <p class="request-text">Cordially invites you to the</p>
-        </div>
+            
+            <p style="letter-spacing: 3px; font-weight: 200; font-size: 0.9rem;">CORDially INVITES YOU TO</p>
 
-        <div class="animate-up" style="animation-delay: 0.3s;">
             <h1 class="event-title">GRADUATION DAY</h1>
             <div class="cursive-divider">&</div>
-            <h1 class="event-title">ANNUAL RESULTS DAY & PTM<br> <span style="font-size: 0.7em;">2026</span></h1>
-        </div>
+            <h1 class="event-title">ANNUAL RESULTS DAY</h1>
 
-      <div class="details-grid animate-up" style="animation-delay: 0.6s;">
-    <div class="detail-item">
-        <i class="far fa-calendar-alt"></i>
-        <span>April 30, 2026</span>
-    </div>
+            <div class="details-row">
+                <div class="detail-box">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>April 30, 2026</span>
+                </div>
+                
+                <div class="v-line"></div>
+                
+                <div class="detail-box">
+                    <i class="far fa-clock"></i>
+                    <span>09:00 AM Onwards</span>
+                </div>
+            </div>
 
-    <div class="vertical-divider"></div>
+            <div class="venue-section">
+                <p class="venue-title"><i class="fas fa-map-marker-alt"></i> VENUE</p>
+                <p class="address">Paramount Campus, Laxmipur, Warangal,<br>Telangana 506005</p>
+                <a href="https://wa.me/919000641355?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Paramount%20School." style="color: var(--gold); text-decoration: none; border: 1px solid var(--gold); padding: 8px 20px; border-radius: 50px; font-size: 0.7rem; margin-top: 15px; display: inline-block;">View Location in Google Maps</a>
+            </div>
 
-    <div class="detail-item">
-        <i class="far fa-clock"></i>
-        <span>09:00 AM Onwards</span>
-    </div>
-</div>
+            <div class="footer-inner">
+                <p style="font-size: 0.7rem; opacity: 0.5; letter-spacing: 2px;">JOIN US IN CELEBRATING SUCCESS...</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/paramountschoolwgl" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/paramount.07" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@paramountschoolwgl" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a href="https://wa.me/919000641355" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <p style="font-size: 0.6rem; opacity: 0.4; margin-top: 20px;">© 2026 Paramount School. All Rights Reserved.</p>
+            </div>
 
-        <div class="venue-section animate-up" style="animation-delay: 0.8s;">
-    <p class="venue-title">
-        <i class="fas fa-map-marker-alt"></i> VENUE
-    </p>
-    
-    <p class="address">
-        Paramount Campus, Laxmipur,<br>
-        Warangal, Telangana 506005
-    </p>
-    
-    <a href="https://maps.google.com/?q=Paramount+English+Medium+School+Warangal" target="_blank" style="color: var(--gold); text-decoration: none; font-size: 0.8rem; margin-top: 20px; display: inline-block; border: 1px solid rgba(197, 160, 89, 0.5); padding: 10px 25px; border-radius: 50px; transition: 0.3s; letter-spacing: 1px;">
-        CLICK TO NAVIGATE
-    </a>
-</div>
-
-        <div class="countdown-container animate-up" style="animation-delay: 1s;">
-            <div class="count-box"><span id="d">00</span><label>Days</label></div>
-            <div class="count-box"><span id="h">00</span><label>Hrs</label></div>
-            <div class="count-box"><span id="m">00</span><label>Min</label></div>
-            <div class="count-box"><span id="s">00</span><label>Sec</label></div>
-        </div>
-
-        <p class="footer-note">We look forward to welcoming you</p>
-    </div>
-
-    <script>
-        // Set your event date here
-        const target = new Date("April 30, 2026 09:00:00").getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const diff = target - now;
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById("d").innerText = String(days).padStart(2, '0');
-            document.getElementById("h").innerText = String(hours).padStart(2, '0');
-            document.getElementById("m").innerText = String(mins).padStart(2, '0');
-            document.getElementById("s").innerText = String(secs).padStart(2, '0');
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
-    <footer>
-    <div class="footer-container">
-        <p class="copyright">
-            &copy; 2026, Paramount English Medium School. All Rights Reserved.
-        </p>
-
-        <h3 class="connect-text">Connect with us</h3>
-
-        <div class="social-icons">
-            <a href="https://www.facebook.com/paramountschoolwgl" target="_blank" title="Facebook">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            
-            <a href="https://www.instagram.com/paramount.07?igsh=M3RvdWV2dGpuaHNv" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            
-            <a href="https://youtube.com/@paramountschoolwgl?si=6HqzPM2aXsbiSTz4" target="_blank" title="YouTube">
-                <i class="fab fa-youtube"></i>
-            </a>
-            
-            <a href="https://wa.me/919000641355?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Paramount%20School." target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
         </div>
     </div>
-</footer>
+
 </body>
 </html>
