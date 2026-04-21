@@ -16,6 +16,77 @@
             --navy: #030a1a;
             --white: #f4f4f4;
         }
+        /* --- Premium Footer Styling --- */
+footer {
+    background-color: #030a1a; /* Deep Navy to match your theme */
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 2px solid #c5a059; /* Gold top border */
+    margin-top: 50px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.connect-text {
+    font-family: 'Cinzel', serif;
+    color: #c5a059;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Hover Effects */
+.social-icons a:hover {
+    color: #030a1a;
+    background-color: #c5a059;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+    border-color: #c5a059;
+}
+
+/* Responsive Tweak for Mobile */
+@media (max-width: 480px) {
+    .social-icons {
+        gap: 15px;
+    }
+    .social-icons a {
+        font-size: 20px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+}
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -29,15 +100,67 @@
                               url('https://www.transparenttextures.com/patterns/dark-leather.png');
         }
 
-        /* Luxury Border Frame */
-        .page-frame {
-            position: fixed;
-            top: 20px; left: 20px; right: 20px; bottom: 20px;
-            border: 1px solid var(--gold);
-            pointer-events: none;
-            z-index: 100;
-        }
+     .invitation-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 20px; /* Increased top padding for a clean look */
+    text-align: center;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+/* 3. ADD THE FOOTER CSS AT THE BOTTOM */
+footer {
+    background-color: rgba(3, 10, 26, 0.8); /* Semi-transparent navy */
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(197, 160, 89, 0.3); /* Subtle gold line instead of heavy border */
+    margin-top: 50px;
+}
+
+.connect-text {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid rgba(197, 160, 89, 0.4);
+    border-radius: 50%;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: var(--gold);
+    color: var(--navy);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
         .invitation-container {
             max-width: 900px;
             margin: 0 auto;
@@ -140,6 +263,20 @@
             max-width: 400px;
             margin: 0 auto;
         }
+        .venue-title {
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    display: flex; /* Helps align icon and text */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between icon and word */
+}
+
+.venue-title i {
+    font-size: 1.2rem;
+}
 
         /* Elegant Countdown */
         .countdown-container {
@@ -219,16 +356,19 @@
         </div>
 
         <div class="venue-section animate-up" style="animation-delay: 0.8s;">
-            <p class="venue-title">VENUE</p>
-            <p class="address">
-                Paramount Campus, Laxmipur,<br>
-                Warangal, Telangana 506005
-            </p>
-            
-            <a href="https://maps.app.goo.gl/Eishwheg4aKGmy326" target="_blank" style="color: var(--gold); text-decoration: none; font-size: 0.8rem; margin-top: 15px; display: inline-block; border: 1px solid var(--gold); padding: 8px 20px; border-radius: 50px;">
-                <i class="fas fa-map-marker-alt"></i> VIEW LOCATION
-            </a>
-        </div>
+    <p class="venue-title">
+        <i class="fas fa-map-marker-alt"></i> VENUE
+    </p>
+    
+    <p class="address">
+        Paramount Campus, Laxmipur,<br>
+        Warangal, Telangana 506005
+    </p>
+    
+    <a href="https://maps.google.com/?q=Paramount+English+Medium+School+Warangal" target="_blank" style="color: var(--gold); text-decoration: none; font-size: 0.8rem; margin-top: 20px; display: inline-block; border: 1px solid rgba(197, 160, 89, 0.5); padding: 10px 25px; border-radius: 50px; transition: 0.3s; letter-spacing: 1px;">
+        CLICK TO NAVIGATE
+    </a>
+</div>
 
         <div class="countdown-container animate-up" style="animation-delay: 1s;">
             <div class="count-box"><span id="d">00</span><label>Days</label></div>
@@ -262,5 +402,32 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
+    <footer>
+    <div class="footer-container">
+        <p class="copyright">
+            &copy; 2026, Paramount English Medium School. All Rights Reserved.
+        </p>
+
+        <h3 class="connect-text">Connect with us</h3>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/paramountschoolwgl" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            
+            <a href="https://www.instagram.com/paramount.07?igsh=M3RvdWV2dGpuaHNv" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            
+            <a href="https://youtube.com/@paramountschoolwgl?si=6HqzPM2aXsbiSTz4" target="_blank" title="YouTube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            
+            <a href="https://wa.me/919000641355?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Paramount%20School." target="_blank" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
