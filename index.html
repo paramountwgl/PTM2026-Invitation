@@ -23,12 +23,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden; /* Stops the main body from scrolling */
+            overflow: hidden;
             font-family: 'Montserrat', sans-serif;
             background-image: radial-gradient(circle at center, #1e293b 0%, #030a1a 100%);
         }
 
-        /* The Premium Outer Border */
         .invitation-frame {
             width: 92%;
             max-width: 850px;
@@ -42,18 +41,15 @@
             flex-direction: column;
         }
 
-        /* Scrollable Content Area - Information stays INSIDE */
         .scroll-content {
             flex: 1;
             overflow-y: auto;
             padding: 40px 20px;
             text-align: center;
-            /* Thin scrollbar for premium look */
             scrollbar-width: thin;
             scrollbar-color: var(--gold) transparent;
         }
 
-        /* Custom Scrollbar for Chrome/Safari */
         .scroll-content::-webkit-scrollbar { width: 4px; }
         .scroll-content::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
 
@@ -70,34 +66,60 @@
 
         .cursive-divider { font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--gold); }
 
-        /* Date/Time Row Fix */
         .details-row {
             display: flex;
             align-items: center;
             justify-content: center;
-            max-width: 500px;
+            max-width: 550px;
             margin: 40px auto;
             border-top: 1px solid rgba(197, 160, 89, 0.3);
             border-bottom: 1px solid rgba(197, 160, 89, 0.3);
-            padding: 20px 0;
+            padding: 25px 0;
         }
 
         .detail-box { flex: 1; text-align: center; }
         .detail-box i { color: var(--gold); display: block; margin-bottom: 8px; font-size: 1.2rem; }
-        .detail-box span { font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: #fff; }
+        .detail-box span { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: #fff; font-weight: 400; }
 
         .v-line {
             width: 1px;
             height: 50px;
             background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-            margin: 0 10px;
+            margin: 0 15px;
+        }
+
+        /* --- New Premium Countdown --- */
+        .countdown-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+        }
+        .count-unit {
+            background: rgba(197, 160, 89, 0.05);
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            padding: 15px;
+            min-width: 75px;
+            border-radius: 5px;
+        }
+        .count-unit span {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--gold);
+            font-weight: 700;
+        }
+        .count-unit label {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255,255,255,0.6);
         }
 
         .venue-section { margin: 40px 0; }
         .venue-title { color: var(--gold); font-weight: 600; letter-spacing: 2px; display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 10px; }
         .address { font-size: 0.85rem; opacity: 0.8; line-height: 1.6; color: #fff; }
 
-        /* Social Footer inside Scroll */
         .footer-inner { margin-top: 50px; padding-bottom: 20px; }
         .social-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; }
         .social-links a { color: var(--gold); font-size: 1.2rem; transition: 0.3s; }
@@ -105,8 +127,10 @@
 
         @media (max-width: 600px) {
             .invitation-frame { height: 90vh; width: 95%; }
-            .details-row { flex-direction: row; font-size: 0.7rem; }
-            .v-line { height: 40px; }
+            .details-row { flex-direction: row; }
+            .v-line { height: 40px; margin: 0 8px; }
+            .count-unit { min-width: 65px; padding: 10px; }
+            .count-unit span { font-size: 1.4rem; }
         }
     </style>
 </head>
@@ -118,7 +142,7 @@
             <img src="School logo 2.png" alt="Logo" class="school-logo">
             <h2 class="school-name">Paramount English Medium School</h2>
             
-            <p style="letter-spacing: 3px; font-weight: 200; font-size: 0.9rem;">CORDially INVITES YOU TO</p>
+            <p style="letter-spacing: 3px; font-weight: 200; font-size: 0.8rem; opacity: 0.7;">CORDIALLY INVITES YOU TO</p>
 
             <h1 class="event-title">GRADUATION DAY</h1>
             <div class="cursive-divider">&</div>
@@ -138,14 +162,23 @@
                 </div>
             </div>
 
+            <div class="countdown-wrapper">
+                <div class="count-unit"><span id="days">00</span><label>Days</label></div>
+                <div class="count-unit"><span id="hours">00</span><label>Hrs</label></div>
+                <div class="count-unit"><span id="mins">00</span><label>Min</label></div>
+                <div class="count-unit"><span id="secs">00</span><label>Sec</label></div>
+            </div>
+
             <div class="venue-section">
                 <p class="venue-title"><i class="fas fa-map-marker-alt"></i> VENUE</p>
                 <p class="address">Paramount Campus, Laxmipur, Warangal,<br>Telangana 506005</p>
-                <a href="https://wa.me/919000641355?text=Hello!%20I%20would%20like%20to%20know%20more%20about%20Paramount%20School." style="color: var(--gold); text-decoration: none; border: 1px solid var(--gold); padding: 8px 20px; border-radius: 50px; font-size: 0.7rem; margin-top: 15px; display: inline-block;">View Location in Google Maps</a>
+                <a href="https://maps.google.com" target="_blank" style="color: var(--gold); text-decoration: none; border: 1px solid var(--gold); padding: 8px 25px; border-radius: 50px; font-size: 0.7rem; margin-top: 20px; display: inline-block; letter-spacing: 1px; transition: 0.3s;">NAVIGATE VIA MAPS</a>
             </div>
 
             <div class="footer-inner">
-                <p style="font-size: 0.7rem; opacity: 0.5; letter-spacing: 2px;">JOIN US IN CELEBRATING SUCCESS...</p>
+                <p style="font-size: 0.7rem; opacity: 0.5; letter-spacing: 2px;">JOIN US IN CELEBRATING SUCCESS</p>
+                <h3 class="connect-text">Connect with us</h3>
+
                 <div class="social-links">
                     <a href="https://www.facebook.com/paramountschoolwgl" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/paramount.07" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -158,5 +191,23 @@
         </div>
     </div>
 
+    <script>
+        const targetDate = new Date("April 30, 2026 09:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff > 0) {
+                document.getElementById("days").innerText = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+                document.getElementById("hours").innerText = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                document.getElementById("mins").innerText = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+                document.getElementById("secs").innerText = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
