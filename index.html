@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation | Paramount English Medium School</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Great+Vibes&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="icon" type="image/png" href="School logo 2.png">
+
+    <style>
+        :root {
+            --gold: #c5a059;
+            --dark-gold: #8e6d2f;
+            --navy: #030a1a;
+            --white: #f4f4f4;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--navy);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            /* Elegant background texture */
+            background-image: radial-gradient(circle at center, rgba(30, 41, 59, 0.5) 0%, rgba(3, 10, 26, 1) 100%),
+                              url('https://www.transparenttextures.com/patterns/dark-leather.png');
+        }
+
+        /* Luxury Border Frame */
+        .page-frame {
+            position: fixed;
+            top: 20px; left: 20px; right: 20px; bottom: 20px;
+            border: 1px solid var(--gold);
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .invitation-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 20px;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .school-logo {
+            height: 100px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0 10px rgba(197, 160, 89, 0.4));
+            animation: fadeIn 2s ease-in;
+        }
+
+        .school-name {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            letter-spacing: 5px;
+            color: var(--gold);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .request-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            letter-spacing: 3px;
+            margin: 40px 0;
+            opacity: 0.8;
+        }
+
+        .event-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 6vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--gold), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cursive-divider {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3rem;
+            color: var(--gold);
+            margin: 15px 0;
+        }
+
+        /* Luxury Details Box */
+        .details-grid {
+            margin: 50px auto;
+            max-width: 600px;
+            border-top: 1px solid var(--gold);
+            border-bottom: 1px solid var(--gold);
+            padding: 30px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .detail-item {
+            padding: 10px;
+        }
+
+        .detail-item i {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .detail-item span {
+            display: block;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .venue-section {
+            margin-top: 30px;
+        }
+
+        .venue-title {
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .address {
+            font-style: normal;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Elegant Countdown */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .count-box span {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            color: var(--gold);
+        }
+
+        .count-box label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-up {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        /* Responsive Mobile Tweak */
+        @media (max-width: 600px) {
+            .details-grid { grid-template-columns: 1fr; }
+            .event-title { font-size: 2.2rem; }
+            .countdown-container { gap: 15px; }
+            .page-frame { top: 10px; left: 10px; right: 10px; bottom: 10px; }
+        }
+
+        .footer-note {
+            margin-top: 80px;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            opacity: 0.5;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-frame"></div>
+
+    <div class="invitation-container">
+        <div class="animate-up">
+            <img src="School logo 2.png" alt="School Logo" class="school-logo">
+            <h2 class="school-name">Paramount English Medium School</h2>
+            <p class="request-text">Cordially invites you to the</p>
+        </div>
+
+        <div class="animate-up" style="animation-delay: 0.3s;">
+            <h1 class="event-title">GRADUATION DAY</h1>
+            <div class="cursive-divider">&</div>
+            <h1 class="event-title">ANNUAL RESULTS DAY <br> <span style="font-size: 0.7em;">2026</span></h1>
+        </div>
+
+        <div class="details-grid animate-up" style="animation-delay: 0.6s;">
+            <div class="detail-item">
+                <i class="far fa-calendar-alt"></i>
+                <span>April 30, 2026</span>
+            </div>
+            <div class="detail-item">
+                <i class="far fa-clock"></i>
+                <span>09:00 AM Onwards</span>
+            </div>
+        </div>
+
+        <div class="venue-section animate-up" style="animation-delay: 0.8s;">
+            <p class="venue-title">VENUE</p>
+            <p class="address">
+                Paramount Campus, Laxmipur,<br>
+                Warangal, Telangana 506005
+            </p>
+            
+            <a href="https://maps.google.com" target="_blank" style="color: var(--gold); text-decoration: none; font-size: 0.8rem; margin-top: 15px; display: inline-block; border: 1px solid var(--gold); padding: 8px 20px; border-radius: 50px;">
+                <i class="fas fa-map-marker-alt"></i> VIEW LOCATION
+            </a>
+        </div>
+
+        <div class="countdown-container animate-up" style="animation-delay: 1s;">
+            <div class="count-box"><span id="d">00</span><label>Days</label></div>
+            <div class="count-box"><span id="h">00</span><label>Hrs</label></div>
+            <div class="count-box"><span id="m">00</span><label>Min</label></div>
+            <div class="count-box"><span id="s">00</span><label>Sec</label></div>
+        </div>
+
+        <p class="footer-note">We look forward to welcoming you</p>
+    </div>
+
+    <script>
+        // Set your event date here
+        const target = new Date("April 30, 2026 09:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = target - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("d").innerText = String(days).padStart(2, '0');
+            document.getElementById("h").innerText = String(hours).padStart(2, '0');
+            document.getElementById("m").innerText = String(mins).padStart(2, '0');
+            document.getElementById("s").innerText = String(secs).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
